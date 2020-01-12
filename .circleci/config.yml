@@ -29,8 +29,6 @@ workflows:
           <<: *branch-filters
       - docker/publish:
           name: publish-frontend
-          requires:
-            - django-tools/check
           path: frontend
           cache_from: "pennlabs/project_name-frontend:latest"
           image: "pennlabs/project_name-frontend"

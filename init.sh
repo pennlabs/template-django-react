@@ -13,12 +13,9 @@ mv README.md.template README.md
 mkdir backend
 mkdir frontend
 
-django-admin startproject --template=https://github.com/pennlabs/template-django/archive/master.zip --extension=py,cfg,yaml --name=Dockerfile $1 backend
+django-admin startproject --template=https://github.com/pennlabs/labs-django-startproject/archive/master.zip --extension=py,cfg --name=Dockerfile $1 backend
 
 # Remove unnecessary backend files
-rm -r backend/circleci
-rm -rf backend/k8s
-rm backend/.gitignore
 rm backend/LICENSE
 rm backend/README.md
 
